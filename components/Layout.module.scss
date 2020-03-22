@@ -1,0 +1,29 @@
+.layout {
+  min-height: 100vh;
+
+  .header {
+    padding: 0;
+    height: 40px;
+
+    .icon {
+      float: left;
+      line-height: 40px;
+      padding: 0 8px;
+      font-size: 28px;
+      color: white;
+    }
+
+    .menu {
+      line-height: 40px;
+    }
+  }
+
+  .content {
+    padding: 16px;
+  }
+
+  .footer {
+    padding: 4px 0;
+    text-align: center;
+  }
+}
