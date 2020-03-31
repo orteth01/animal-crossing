@@ -7,7 +7,7 @@ const { Header, Content, Footer } = AntLayout;
 
 const links = [
   { href: '/', label: 'home' },
-  { href: '/pricing', label: 'pricing' },
+  { href: '/items', label: 'items' },
 ];
 
 type PricingProps = {

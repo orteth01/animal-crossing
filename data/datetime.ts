@@ -1,6 +1,6 @@
 import { Hour, Month } from 'types/datetime';
 
-export const allTimes: Hour[] = [
+export const allHours: Hour[] = [
   0,
   1,
   2,
@@ -25,7 +25,6 @@ export const allTimes: Hour[] = [
   21,
   22,
   23,
-  24,
 ];
 
 export const allMonths: Month[] = [
