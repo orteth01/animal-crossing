@@ -1,3 +1,4 @@
+import format from 'date-fns/format';
 import { Hour, Month } from 'types/datetime';
 
 export const allHours: Hour[] = [
@@ -27,17 +28,8 @@ export const allHours: Hour[] = [
   23,
 ];
 
-export const allMonths: Month[] = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
+export const allMonths: Month[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+export function getMonthDisplay(month: Month) {
+  return format(new Date(2000, month, 1), 'LLLL');
+}

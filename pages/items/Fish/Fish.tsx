@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card, Tag, Switch, Row, Col, List } from 'antd';
+import { Card, Tag } from 'antd';
 import { Hour, Month } from 'types/datetime';
-import { allHours, allMonths } from 'data/datetime';
+import { allHours, allMonths, getMonthDisplay } from 'data/datetime';
 import { Item } from 'types/item';
 import css from './Fish.module.scss';
 
@@ -95,7 +95,7 @@ function renderMonths(months: Month[]): JSX.Element {
   return (
     <>
       {months.map((month) => (
-        <Tag key={`month-${month}`}>{month}</Tag>
+        <Tag key={`month-${month}`}>{getMonthDisplay(month)}</Tag>
       ))}
     </>
   );
