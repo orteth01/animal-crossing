@@ -1,8 +1,8 @@
 import React from 'react';
 import { Tabs } from 'antd';
 import { Layout } from 'components/Layout';
-import { Insects } from './Insects/Insects';
-import { Fish } from './Fish/Fish';
+import { Insects } from 'components/Insects/Insects';
+import { Fish } from 'components/Fish/Fish';
 
 export default function Items() {
   return (
