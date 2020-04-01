@@ -13,11 +13,11 @@ export default function Items() {
           hemisphere toggle soon 💙
         </p>
         <Tabs defaultActiveKey="fish" animated={false} size="large">
-          <Tabs.TabPane tab={<>🐛 Insects</>} key="insects">
-            <Insects />
-          </Tabs.TabPane>
           <Tabs.TabPane tab={<>🎣 Fish</>} key="fish">
             <Fish />
+          </Tabs.TabPane>
+          <Tabs.TabPane tab={<>🐛 Insects</>} key="insects">
+            <Insects />
           </Tabs.TabPane>
         </Tabs>
       </>
