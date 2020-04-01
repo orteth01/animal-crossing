@@ -18,3 +18,5 @@ export interface Item {
   hoursActive: Hour[];
   monthsActive: Month[];
 }
+
+export type ItemSortBy = 'Name' | 'Price (low-high)' | 'Price (high-low)';

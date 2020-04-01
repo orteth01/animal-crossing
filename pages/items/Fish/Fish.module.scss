@@ -3,3 +3,18 @@
   width: 30px;
   object-fit: contain;
 }
+
+.icon svg {
+  height: 25px;
+  width: 25px;
+}
+
+.tagColumn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2px;
+}
+
+.tag {
+  text-align: center;
+}

@@ -1,5 +1,10 @@
 import React from 'react';
-import { Card, Tag } from 'antd';
+import { Card, Tag, Row, Col } from 'antd';
+import {
+  ClockCircleTwoTone,
+  CalendarTwoTone,
+  EnvironmentTwoTone,
+} from '@ant-design/icons';
 import { Hour, Month } from 'types/datetime';
 import { allHours, allMonths, getMonthDisplay } from 'data/datetime';
 import { Item } from 'types/item';
@@ -49,7 +54,7 @@ interface TimePeriod {
 
 function renderHours(hours: Hour[]): JSX.Element | String {
   if (hours === allHours) {
-    return <Tag>All hours</Tag>;
+    return <Tag className={css.tag}>All day</Tag>;
   }
 
   const timePeriods = hours.reduce<TimePeriod[]>(function(
@@ -79,23 +84,28 @@ function renderHours(hours: Hour[]): JSX.Element | String {
   return (
     <>
       {timePeriods.map(({ start, end }) => (
-        <Tag key={`time-period-${start}-${end}`}>{`${getHourDisplay(
-          start
-        )}-${getHourDisplay(end, { isEnd: true })}`}</Tag>
+        <Tag
+          key={`time-period-${start}-${end}`}
+          className={css.tag}
+        >{`${getHourDisplay(start)}-${getHourDisplay(end, {
+          isEnd: true,
+        })}`}</Tag>
       ))}
     </>
   );
 }
 
 function renderMonths(months: Month[]): JSX.Element {
-  if (months === allMonths) {
-    return <Tag>All months</Tag>;
-  }
-
   return (
     <>
-      {months.map((month) => (
-        <Tag key={`month-${month}`}>{getMonthDisplay(month)}</Tag>
+      {allMonths.map((month) => (
+        <Tag
+          key={`month-${month}`}
+          className={css.tag}
+          color={months.includes(month) ? 'blue' : 'default'}
+        >
+          {getMonthDisplay(month)}
+        </Tag>
       ))}
     </>
   );
@@ -107,14 +117,31 @@ type FishPropType = {
 
 export function Fish({ fish }: FishPropType) {
   return (
-    <Card key={fish.name} title={fish.name}>
-      <p>
-        {fish.price}
-        <img src="/img/bells.png" className={css.bellsImg} />
-      </p>
-      <p>{fish.location}</p>
-      <p>{renderHours(fish.hoursActive)}</p>
-      <p>{renderMonths(fish.monthsActive)}</p>
+    <Card key={fish.name} title={fish.name} bodyStyle={{ padding: '16px' }}>
+      <Row gutter={[0, 4]} align="top">
+        <Col flex="32px">
+          <img src="/img/bells.png" className={css.bellsImg} />
+        </Col>
+        <Col>{fish.price}</Col>
+      </Row>
+      <Row gutter={[0, 4]} align="top">
+        <Col flex="32px">
+          <EnvironmentTwoTone className={css.icon} />
+        </Col>
+        <Col>{fish.location}</Col>
+      </Row>
+      <Row gutter={[0, 4]} align="top">
+        <Col flex="32px">
+          <ClockCircleTwoTone className={css.icon} />
+        </Col>
+        <Col className={css.tagColumn}>{renderHours(fish.hoursActive)}</Col>
+      </Row>
+      <Row gutter={[0, 4]} align="top">
+        <Col flex="32px">
+          <CalendarTwoTone className={css.icon} />
+        </Col>
+        <Col className={css.tagColumn}>{renderMonths(fish.monthsActive)}</Col>
+      </Row>
     </Card>
   );
 }

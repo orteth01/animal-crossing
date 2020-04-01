@@ -1,3 +1,5 @@
+@import 'styles/breakpoints.scss';
+
 .layout {
   min-height: 100vh;
 
@@ -19,6 +21,8 @@
   }
 
   .content {
+    align-self: center;
+    max-width: 1200px;
     padding: 16px;
   }
 
