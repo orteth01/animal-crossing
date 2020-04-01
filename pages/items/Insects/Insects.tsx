@@ -1,18 +1,18 @@
 import React, { useState, useMemo } from 'react';
 import { Switch, List, Input, Radio, Row, Col, Checkbox } from 'antd';
 import { useDebounce } from 'hooks/useDebounce';
-import { ItemSortBy, FishLocation } from 'types/item';
-import { fish } from 'data/fish';
-import { FishCard } from './FishCard';
+import { ItemSortBy, InsectLocation } from 'types/item';
+import { insects } from 'data/insects';
+import { InsectCard } from './InsectCard';
 import {
   searchFilter,
   onlyShowActiveFilter,
   itemSorter,
   locationsFilter,
 } from '../helpers';
-import css from './Fish.module.scss';
+import css from './Insects.module.scss';
 
-export function Fish() {
+export function Insects() {
   // only show active toggle
   const [onlyShowActive, setOnlyShowActive] = useState(true);
 
@@ -21,11 +21,11 @@ export function Fish() {
   const debouncedSearchValue = useDebounce(searchValue, 500);
 
   // location
-  const [locations, setLocations] = useState<FishLocation[]>([]);
+  const [locations, setLocations] = useState<InsectLocation[]>([]);
 
   // apply all filters
-  const filteredFish = useMemo(() => {
-    let ret = [...fish];
+  const filteredInsects = useMemo(() => {
+    let ret = [...insects];
 
     if (onlyShowActive) {
       ret = ret.filter(onlyShowActiveFilter);
@@ -46,10 +46,10 @@ export function Fish() {
 
   // sort
   const [sortValue, setSortValue] = useState<ItemSortBy>('Name');
-  const sortedFish = useMemo(() => filteredFish.sort(itemSorter(sortValue)), [
-    sortValue,
-    filteredFish,
-  ]);
+  const sortedInsects = useMemo(
+    () => filteredInsects.sort(itemSorter(sortValue)),
+    [sortValue, filteredInsects]
+  );
 
   return (
     <>
@@ -93,31 +93,13 @@ export function Fish() {
             </Radio>
           </Radio.Group>
         </Col>
-        <Col xs={24} sm={12} md={8} lg={6}>
-          <p className={css.filterLabel}>Location</p>
-
-          <Checkbox.Group
-            options={[
-              'Pier',
-              'Pond',
-              'River',
-              'River (clifftop)',
-              'River (mouth)',
-              'Sea',
-              'Sea (rainy day)',
-            ]}
-            onChange={(value) => {
-              setLocations(value as FishLocation[]);
-            }}
-          />
-        </Col>
       </Row>
       <List
         grid={{ gutter: 16, xs: 1, sm: 2, md: 3, lg: 4 }}
-        dataSource={sortedFish}
-        renderItem={(f) => (
+        dataSource={sortedInsects}
+        renderItem={(i) => (
           <List.Item>
-            <FishCard fish={f} />
+            <InsectCard insect={i} />
           </List.Item>
         )}
         pagination={{ pageSize: 12 }}

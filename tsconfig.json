@@ -15,7 +15,11 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["./components/*"]
+      "@components/*": ["./components/*"],
+      "@data/*": ["./data/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@styles/*": ["./styles/*"],
+      "@types/*": ["./types/*"]
     }
   },
   "exclude": ["node_modules"],

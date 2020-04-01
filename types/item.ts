@@ -1,6 +1,6 @@
 import { Hour, Month } from './datetime';
 
-type FishLocation =
+export type FishLocation =
   | 'River'
   | 'Pond'
   | 'River (clifftop)'
@@ -9,14 +9,42 @@ type FishLocation =
   | 'Pier'
   | 'Sea (rainy day)';
 
-type Location = FishLocation;
+export type InsectLocation =
+  | 'Flying'
+  | 'Flying by hybrid flowers'
+  | 'Flying by purple flowers'
+  | 'Flying by light'
+  | 'On trees'
+  | 'On tree stumps'
+  | 'On coconut trees'
+  | 'Falls from shaking trees'
+  | 'On ground'
+  | 'Dig at cricket noise'
+  | 'On flowers'
+  | 'On white flowers'
+  | 'Underground'
+  | 'Ponds'
+  | 'Ponds and rivers'
+  | 'Pushing snowballs'
+  | 'Near trees, disguised as furniture leaf'
+  | 'Beach'
+  | 'On rocks at beach'
+  | 'On rocks (raining)'
+  | 'Hit rocks'
+  | 'On trash items'
+  | 'On villagers'
+  | 'On rotten food';
+
+export type Location = FishLocation | InsectLocation;
+
+export type Unknown = 'unknown';
 
 export interface Item {
   name: string;
-  price: number;
-  location: Location;
-  hoursActive: Hour[];
+  value: number;
+  location: Location | Unknown;
+  hoursActive: Hour[] | Unknown;
   monthsActive: Month[];
 }
 
-export type ItemSortBy = 'Name' | 'Price (low-high)' | 'Price (high-low)';
+export type ItemSortBy = 'Name' | 'Value (low-high)' | 'Value (high-low)';
