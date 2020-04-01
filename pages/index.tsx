@@ -6,7 +6,8 @@ export default function Home() {
     <Layout>
       <div>
         <iframe
-          width="100%"
+          width="300px"
+          height="300px"
           src="https://www.youtube.com/embed/6PQrdBsrZVE"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         ></iframe>
