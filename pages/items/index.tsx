@@ -12,7 +12,7 @@ export default function Items() {
           note: this is for northern hemisphere for now. i plan to add a
           hemisphere toggle soon 💙
         </p>
-        <Tabs defaultActiveKey="fish" animated={false} size="large">
+        <Tabs defaultActiveKey="fish" size="large">
           <Tabs.TabPane tab={<>🎣 Fish</>} key="fish">
             <Fish />
           </Tabs.TabPane>
