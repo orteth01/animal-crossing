@@ -48,7 +48,12 @@ export function Layout({ children }: PricingProps) {
       </AntLayout.Header>
       <AntLayout.Content className={css.content}>{children}</AntLayout.Content>
       <AntLayout.Footer className={css.footer}>
-        Made for me - might be useful for you! <br /> 💖 Teddy 💖
+        Made for us - might be useful for you! <br /> contributions to the{' '}
+        <a href="https://github.com/orteth01/animal-crossing" target="_blank">
+          Github repo
+        </a>{' '}
+        are very much welcome and appreciated!
+        <br /> 💖 Teddy + Ryne 💖
       </AntLayout.Footer>
     </AntLayout>
   );
