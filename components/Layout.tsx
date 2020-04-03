@@ -28,7 +28,9 @@ export function Layout({ children }: PricingProps) {
         >
           {links.map(({ href, label }) => (
             <Menu.Item key={href}>
-              <Link href={href}>{label}</Link>
+              <Link href={href}>
+                <a>{label}</a>
+              </Link>
             </Menu.Item>
           ))}
         </Menu>

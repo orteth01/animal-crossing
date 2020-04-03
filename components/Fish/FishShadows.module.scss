@@ -1,0 +1,16 @@
+.shadow {
+  height: 25px;
+  width: 25px;
+  object-fit: cover;
+
+  &.isActive {
+    background-color: #e6f7ff;
+    border: 1px solid #91d5ff;
+    border-radius: 2px;
+  }
+
+  &.isInactive {
+    border: none;
+    opacity: 0.2;
+  }
+}

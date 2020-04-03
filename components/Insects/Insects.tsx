@@ -1,29 +1,19 @@
 import React, { useState, useMemo } from 'react';
-import { Switch, List, Input, Radio, Row, Col, Checkbox } from 'antd';
+import { Switch, List, Input, Radio, Row, Col } from 'antd';
 import { useDebounce } from 'hooks/useDebounce';
-import { ItemSortBy, InsectLocation } from 'types/item';
+import { ItemSortBy } from 'types/item';
+import { itemSortOptions } from 'data/item';
 import { insects } from 'data/insects';
 import { InsectCard } from './InsectCard';
-import {
-  searchFilter,
-  onlyShowActiveFilter,
-  itemSorter,
-  locationsFilter,
-} from '../helpers';
+import { searchFilter, onlyShowActiveFilter } from 'helpers/filter';
+import { itemSorter } from 'helpers/sort';
 import css from './Insects.module.scss';
 
 export function Insects() {
-  // only show active toggle
+  // filter
   const [onlyShowActive, setOnlyShowActive] = useState(true);
-
-  // search
   const [searchValue, setSearchValue] = useState('');
   const debouncedSearchValue = useDebounce(searchValue, 500);
-
-  // location
-  const [locations, setLocations] = useState<InsectLocation[]>([]);
-
-  // apply all filters
   const filteredInsects = useMemo(() => {
     let ret = [...insects];
 
@@ -33,16 +23,12 @@ export function Insects() {
       // apply custom filters
     }
 
-    if (locations.length) {
-      ret = ret.filter(locationsFilter(locations));
-    }
-
     if (debouncedSearchValue) {
       ret = ret.filter(searchFilter(debouncedSearchValue));
     }
 
     return ret;
-  }, [onlyShowActive, debouncedSearchValue, locations]);
+  }, [onlyShowActive, debouncedSearchValue]);
 
   // sort
   const [sortValue, setSortValue] = useState<ItemSortBy>('Name');
@@ -82,15 +68,21 @@ export function Insects() {
             onChange={(e) => setSortValue(e.target.value)}
             value={sortValue}
           >
-            <Radio className={css.sortRadio} value="Name">
-              Name
-            </Radio>
-            <Radio className={css.sortRadio} value="Value (high-low)">
-              Value (high-low)
-            </Radio>
-            <Radio className={css.sortRadio} value="Value (low-high)">
-              Value (low-high)
-            </Radio>
+            <Radio.Group
+              name="Sort by"
+              onChange={(e) => setSortValue(e.target.value)}
+              value={sortValue}
+            >
+              {itemSortOptions.map((sortType) => (
+                <Radio
+                  className={css.sortRadio}
+                  value={sortType}
+                  key={`sort-type-${sortType}`}
+                >
+                  {sortType}
+                </Radio>
+              ))}
+            </Radio.Group>
           </Radio.Group>
         </Col>
       </Row>
