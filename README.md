@@ -1,30 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
+# Animal Crossing Helper
 
-## Getting Started
+We wanted to make a helper for searching, sorting, and filtering item data. Currently the app supports Fish and Insects.
 
-First, run the development server:
+## tech
+
+- [React](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [Ant Design](https://ant.design/)
+- [Typescript](https://www.typescriptlang.org/)
+
+## Running the app
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Credits
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Fish data from:
 
-## Learn More
+- [attack of the fan boy](https://attackofthefanboy.com/guides/animal-crossing-new-horizons-fish-prices-guide/)
+- [Polygon](https://www.polygon.com/animal-crossing-new-horizons-switch-acnh-guide/2020/3/23/21190775/fish-locations-times-month-day-list-critterpedia)
 
-To learn more about Next.js, take a look at the following resources:
+Insect data from:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [VG247](https://www.vg247.com/2020/03/27/animal-crossing-new-horizons-bug-prices-locations/)
+- [Polygon](https://www.polygon.com/animal-crossing-new-horizons-switch-acnh-guide/2020/3/24/21191276/insect-bug-locations-times-month-day-list-critterpedia)
 
-You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on ZEIT Now
-
-The easiest way to deploy your Next.js app is to use the [ZEIT Now Platform](https://zeit.co/) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you see data that is incorrect, please [create an issue](https://github.com/orteth01/animal-crossing/issues/new) and add the `invalid data` label or just open a PR.
