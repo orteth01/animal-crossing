@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import 'antd/dist/antd.css';
-import 'styles/main.scss';
 
 type AppPropsType = {
   Component: any;

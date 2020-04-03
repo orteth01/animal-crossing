@@ -45,8 +45,8 @@ export interface Item {
   name: string;
   value: number;
   location: Location | Unknown;
-  hoursActive: Hour[] | Unknown;
-  monthsActive: Month[];
+  activeHours: Hour[] | Unknown;
+  activeMonths: Set<Month>;
   shadow?: FishShadowSize;
 }
 

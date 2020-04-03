@@ -2,35 +2,30 @@ import React, { useState, useMemo } from 'react';
 import { Switch, List, Input, Radio, Row, Col, Checkbox } from 'antd';
 import { useDebounce } from 'hooks/useDebounce';
 import { ItemSortBy, FishLocation } from 'types/item';
-import { fish } from 'data/fish';
+import { itemSortOptions } from 'data/item';
+import { fish, fishLocations } from 'data/fish';
 import { FishCard } from './FishCard';
 import {
   searchFilter,
   onlyShowActiveFilter,
-  itemSorter,
   locationsFilter,
-} from '../helpers';
+} from 'helpers/filter';
+import { itemSorter } from 'helpers/sort';
 import css from './Fish.module.scss';
 
 export function Fish() {
-  // only show active toggle
+  // filter
   const [onlyShowActive, setOnlyShowActive] = useState(true);
-
-  // search
+  const [locations, setLocations] = useState<FishLocation[]>([]);
   const [searchValue, setSearchValue] = useState('');
   const debouncedSearchValue = useDebounce(searchValue, 500);
-
-  // location
-  const [locations, setLocations] = useState<FishLocation[]>([]);
-
-  // apply all filters
   const filteredFish = useMemo(() => {
     let ret = [...fish];
 
     if (onlyShowActive) {
       ret = ret.filter(onlyShowActiveFilter);
     } else {
-      // apply custom filters
+      // TODO: apply custom date/time filters
     }
 
     if (locations.length) {
@@ -46,10 +41,9 @@ export function Fish() {
 
   // sort
   const [sortValue, setSortValue] = useState<ItemSortBy>('Name');
-  const sortedFish = useMemo(() => filteredFish.sort(itemSorter(sortValue)), [
-    sortValue,
-    filteredFish,
-  ]);
+  const sortedFish = useMemo(() => {
+    return filteredFish.sort(itemSorter(sortValue));
+  }, [sortValue, filteredFish]);
 
   return (
     <>
@@ -82,30 +76,22 @@ export function Fish() {
             onChange={(e) => setSortValue(e.target.value)}
             value={sortValue}
           >
-            <Radio className={css.sortRadio} value="Name">
-              Name
-            </Radio>
-            <Radio className={css.sortRadio} value="Value (high-low)">
-              Value (high-low)
-            </Radio>
-            <Radio className={css.sortRadio} value="Value (low-high)">
-              Value (low-high)
-            </Radio>
+            {itemSortOptions.map((sortType) => (
+              <Radio
+                className={css.sortRadio}
+                value={sortType}
+                key={`sort-type-${sortType}`}
+              >
+                {sortType}
+              </Radio>
+            ))}
           </Radio.Group>
         </Col>
         <Col xs={24} sm={12} md={8} lg={6}>
           <p className={css.filterLabel}>Location</p>
 
           <Checkbox.Group
-            options={[
-              'Pier',
-              'Pond',
-              'River',
-              'River (clifftop)',
-              'River (mouth)',
-              'Sea',
-              'Sea (rainy day)',
-            ]}
+            options={fishLocations}
             onChange={(value) => {
               setLocations(value as FishLocation[]);
             }}

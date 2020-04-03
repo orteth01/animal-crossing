@@ -24,3 +24,8 @@ export type Hour =
   | 21
   | 22
   | 23;
+
+export interface TimePeriod {
+  start: Hour;
+  end: Hour;
+}
