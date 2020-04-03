@@ -9,6 +9,8 @@ export type FishLocation =
   | 'Pier'
   | 'Sea (rainy day)';
 
+export type FishShadowSize = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7;
+
 export type InsectLocation =
   | 'Flying'
   | 'Flying by hybrid flowers'
@@ -45,6 +47,7 @@ export interface Item {
   location: Location | Unknown;
   hoursActive: Hour[] | Unknown;
   monthsActive: Month[];
+  shadow?: FishShadowSize;
 }
 
 export type ItemSortBy = 'Name' | 'Value (low-high)' | 'Value (high-low)';

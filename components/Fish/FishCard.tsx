@@ -11,6 +11,17 @@ import { allHours, allMonths, getMonthDisplay } from 'data/datetime';
 import { Item, Unknown } from 'types/item';
 import css from './FishCard.module.scss';
 
+const fishShadows = [
+  'smallest',
+  'small',
+  'medium',
+  'large',
+  'x-large',
+  'huge',
+  'huge-fin',
+  'slim',
+];
+
 function getHourDisplay(hour: Hour, options?: { isEnd: boolean }): string {
   const switchCheck = options?.isEnd ? hour + 1 : hour;
   switch (switchCheck) {
@@ -148,6 +159,18 @@ export function FishCard({ fish }: FishPropType) {
           <CalendarTwoTone className={css.icon} />
         </Col>
         <Col className={css.tagColumn}>{renderMonths(fish.monthsActive)}</Col>
+      </Row>
+      <Row gutter={[0, 8]} align="bottom" style={{ paddingTop: '10px' }}>
+        {fishShadows.map((fishShadow, index) => (
+          <Col key={`shadow-${fishShadow}`}>
+            <img
+              className={
+                fish.shadow === index ? css.shadowSelected : css.shadowInactive
+              }
+              src={`/img/${fishShadow}.png`}
+            />
+          </Col>
+        ))}
       </Row>
     </Card>
   );

@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "yarn eslint components pages"
+    "lint": "npm run eslint components pages"
   },
   "dependencies": {
     "antd": "4.0.3",

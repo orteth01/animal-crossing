@@ -8,6 +8,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
     monthsActive: allMonths,
+    shadow: 1,
   },
   {
     name: 'Angelfish',
@@ -15,6 +16,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18, 19, 20, 21, 22, 23],
     monthsActive: [4, 5, 6, 7, 8, 9],
+    shadow: 1,
   },
   {
     name: 'Arapaima',
@@ -22,6 +24,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18, 19, 20, 21, 22, 23],
     monthsActive: [5, 6, 7, 8],
+    shadow: 5,
   },
   {
     name: 'Arowana',
@@ -29,6 +32,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18, 19, 20, 21, 22, 23],
     monthsActive: [5, 6, 7, 8],
+    shadow: 3,
   },
   {
     name: 'Barred Knifejaw',
@@ -36,6 +40,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: allHours,
     monthsActive: [2, 3, 4, 5, 6, 7, 8, 9, 10],
+    shadow: 2,
   },
   {
     name: 'Barreleye',
@@ -43,6 +48,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: [0, 1, 2, 3, 21, 22, 23],
     monthsActive: allMonths,
+    shadow: 1,
   },
   {
     name: 'Betta',
@@ -50,6 +56,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: [9, 10, 11, 12, 13, 14, 15],
     monthsActive: [4, 5, 6, 7, 8, 9],
+    shadow: 1,
   },
   {
     name: 'Bitterling',
@@ -57,6 +64,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: allHours,
     monthsActive: [0, 1, 2, 10, 11],
+    shadow: 0,
   },
   {
     name: 'Black Bass',
@@ -64,6 +72,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: allHours,
     monthsActive: allMonths,
+    shadow: 3,
   },
   {
     name: 'Blowfish',
@@ -71,6 +80,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: [0, 1, 2, 3, 21, 22, 23],
     monthsActive: [0, 1, 10, 11],
+    shadow: 2,
   },
   {
     name: 'Blue Marlin',
@@ -78,6 +88,7 @@ export const fish: Item[] = [
     location: 'Pier',
     hoursActive: allHours,
     monthsActive: [0, 1, 2, 3, 6, 7, 8, 10, 11],
+    shadow: 5,
   },
   {
     name: 'Bluegill',
@@ -85,6 +96,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: [9, 10, 11, 12, 13, 14, 15],
     monthsActive: allMonths,
+    shadow: 1,
   },
   {
     name: 'Butterfly Fish',
@@ -92,6 +104,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: allHours,
     monthsActive: [3, 4, 5, 6, 7, 8],
+    shadow: 1,
   },
   {
     name: 'Carp',
@@ -99,6 +112,7 @@ export const fish: Item[] = [
     location: 'Pond',
     hoursActive: allHours,
     monthsActive: allMonths,
+    shadow: 3,
   },
   {
     name: 'Catfish',
@@ -106,6 +120,7 @@ export const fish: Item[] = [
     location: 'Pond',
     hoursActive: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18, 19, 20, 21, 22, 23],
     monthsActive: [4, 5, 6, 7, 8, 9],
+    shadow: 3,
   },
   {
     name: 'Char',
@@ -113,6 +128,7 @@ export const fish: Item[] = [
     location: 'River (clifftop)',
     hoursActive: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18, 19, 20, 21, 22, 23],
     monthsActive: [2, 3, 4, 5, 8, 9, 10],
+    shadow: 2,
   },
   {
     name: 'Cherry Salmon',
@@ -120,6 +136,7 @@ export const fish: Item[] = [
     location: 'River (clifftop)',
     hoursActive: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18, 19, 20, 21, 22, 23],
     monthsActive: [2, 3, 4, 5, 8, 9, 10],
+    shadow: 2,
   },
   {
     name: 'Clown Fish',
@@ -127,6 +144,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: allHours,
     monthsActive: [3, 4, 5, 6, 7, 8],
+    shadow: 0,
   },
   {
     name: 'Coelacanth',
@@ -134,6 +152,7 @@ export const fish: Item[] = [
     location: 'Sea (rainy day)',
     hoursActive: allHours,
     monthsActive: allMonths,
+    shadow: 5,
   },
   {
     name: 'Crawfish',
@@ -141,6 +160,7 @@ export const fish: Item[] = [
     location: 'Pond',
     hoursActive: allHours,
     monthsActive: [3, 4, 5, 6, 7, 8],
+    shadow: 1,
   },
   {
     name: 'Crucian Carp',
@@ -148,6 +168,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: allHours,
     monthsActive: allMonths,
+    shadow: 1,
   },
   {
     name: 'Dab',
@@ -155,6 +176,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: allHours,
     monthsActive: [0, 1, 2, 3, 9, 10, 11],
+    shadow: 2,
   },
   {
     name: 'Dace',
@@ -162,6 +184,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18, 19, 20, 21, 22, 23],
     monthsActive: allMonths,
+    shadow: 2,
   },
   {
     name: 'Dorado',
@@ -169,6 +192,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
     monthsActive: [5, 6, 7, 8],
+    shadow: 4,
   },
   {
     name: 'Football Fish',
@@ -176,6 +200,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18, 19, 20, 21, 22, 23],
     monthsActive: [0, 1, 2, 10, 11],
+    shadow: 3,
   },
   {
     name: 'Freshwater Goby',
@@ -183,6 +208,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18, 19, 20, 21, 22, 23],
     monthsActive: allMonths,
+    shadow: 1,
   },
   {
     name: 'Frog',
@@ -190,6 +216,7 @@ export const fish: Item[] = [
     location: 'Pond',
     hoursActive: allHours,
     monthsActive: [4, 5, 6, 7],
+    shadow: 1,
   },
   {
     name: 'Gar',
@@ -197,6 +224,7 @@ export const fish: Item[] = [
     location: 'Pond',
     hoursActive: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18, 19, 20, 21, 22, 23],
     monthsActive: [5, 6, 7, 8],
+    shadow: 5,
   },
   {
     name: 'Giant Snakehead',
@@ -204,6 +232,7 @@ export const fish: Item[] = [
     location: 'Pond',
     hoursActive: [9, 10, 11, 12, 13, 14, 15],
     monthsActive: [5, 6, 7],
+    shadow: 4,
   },
   {
     name: 'Giant Trevally',
@@ -211,6 +240,7 @@ export const fish: Item[] = [
     location: 'Pier',
     hoursActive: allHours,
     monthsActive: [4, 5, 6, 7, 8, 9],
+    shadow: 3,
   },
   {
     name: 'Golden Trout',
@@ -218,6 +248,7 @@ export const fish: Item[] = [
     location: 'River (clifftop)',
     hoursActive: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18, 19, 20, 21, 22, 23],
     monthsActive: [2, 3, 4, 8, 9, 10],
+    shadow: 2,
   },
   {
     name: 'Goldfish',
@@ -225,6 +256,7 @@ export const fish: Item[] = [
     location: 'Pond',
     hoursActive: allHours,
     monthsActive: allMonths,
+    shadow: 0,
   },
   {
     name: 'Great White Shark',
@@ -232,6 +264,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18, 19, 20, 21, 22, 23],
     monthsActive: [5, 6, 7, 8],
+    shadow: 6,
   },
   {
     name: 'Guppy',
@@ -239,6 +272,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: [9, 10, 11, 12, 13, 14, 15],
     monthsActive: [3, 4, 5, 6, 7, 8, 9, 10],
+    shadow: 0,
   },
   {
     name: 'Hammerhead Shark',
@@ -246,6 +280,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18, 19, 20, 21, 22, 23],
     monthsActive: [5, 6, 7, 8],
+    shadow: 6,
   },
   {
     name: 'Horse Mackerel',
@@ -253,6 +288,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: allHours,
     monthsActive: allMonths,
+    shadow: 1,
   },
   {
     name: 'Killifish',
@@ -260,6 +296,7 @@ export const fish: Item[] = [
     location: 'Pond',
     hoursActive: allHours,
     monthsActive: [3, 4, 5, 6, 7],
+    shadow: 0,
   },
   {
     name: 'King Salmon',
@@ -267,6 +304,7 @@ export const fish: Item[] = [
     location: 'River (mouth)',
     hoursActive: allHours,
     monthsActive: [8],
+    shadow: 5,
   },
   {
     name: 'Koi',
@@ -274,6 +312,7 @@ export const fish: Item[] = [
     location: 'Pond',
     hoursActive: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18, 19, 20, 21, 22, 23],
     monthsActive: allMonths,
+    shadow: 3,
   },
   {
     name: 'Loach',
@@ -281,6 +320,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: allHours,
     monthsActive: [2, 3, 4],
+    shadow: 1,
   },
   {
     name: 'Mahi-mahi',
@@ -288,6 +328,7 @@ export const fish: Item[] = [
     location: 'Pier',
     hoursActive: allHours,
     monthsActive: [4, 5, 6, 7, 8, 9],
+    shadow: 3,
   },
   {
     name: 'Mitten Crab',
@@ -295,6 +336,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18, 19, 20, 21, 22, 23],
     monthsActive: [8, 9, 10],
+    shadow: 1,
   },
   {
     name: 'Moray Eel',
@@ -302,6 +344,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: allHours,
     monthsActive: [7, 8, 9],
+    shadow: 7,
   },
   {
     name: 'Napoleonfish',
@@ -309,6 +352,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
     monthsActive: [6, 7],
+    shadow: 5,
   },
   {
     name: 'Neon Tetra',
@@ -316,6 +360,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: [9, 10, 11, 12, 13, 14, 15],
     monthsActive: [3, 4, 5, 6, 7, 8, 9, 10],
+    shadow: 0,
   },
   {
     name: 'Nibble Fish',
@@ -323,6 +368,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: [9, 10, 11, 12, 13, 14, 15],
     monthsActive: [4, 5, 6, 7, 8],
+    shadow: 1,
   },
   {
     name: 'Oarfish',
@@ -330,6 +376,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: allHours,
     monthsActive: [0, 1, 2, 3, 4, 11],
+    shadow: 5,
   },
   {
     name: 'Ocean Sunfish',
@@ -337,6 +384,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
     monthsActive: [6, 7, 8],
+    shadow: 6,
   },
   {
     name: 'Olive Flounder',
@@ -344,6 +392,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: allHours,
     monthsActive: allMonths,
+    shadow: 3,
   },
   {
     name: 'Pale Chub',
@@ -351,6 +400,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: [9, 10, 11, 12, 13, 14, 15],
     monthsActive: allMonths,
+    shadow: 0,
   },
   {
     name: 'Pike',
@@ -358,6 +408,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: allHours,
     monthsActive: [8, 9, 10, 11],
+    shadow: 4,
   },
   {
     name: 'Piranha',
@@ -365,6 +416,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: [0, 1, 2, 3, 9, 10, 11, 12, 13, 14, 15, 21, 22, 23],
     monthsActive: [5, 6, 7, 8],
+    shadow: 1,
   },
   {
     name: 'Pond Smelt',
@@ -372,6 +424,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: allHours,
     monthsActive: [0, 1, 11],
+    shadow: 1,
   },
   {
     name: 'Pop-eyed Goldfish',
@@ -379,6 +432,7 @@ export const fish: Item[] = [
     location: 'Pond',
     hoursActive: [9, 10, 11, 12, 13, 14, 15],
     monthsActive: allMonths,
+    shadow: 0,
   },
   {
     name: 'Puffer Fish',
@@ -386,6 +440,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: allHours,
     monthsActive: [6, 7, 8],
+    shadow: 2,
   },
   {
     name: 'Rainbowfish',
@@ -393,6 +448,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: [9, 10, 11, 12, 13, 14, 15],
     monthsActive: [4, 5, 6, 7, 8, 9],
+    shadow: 1,
   },
   {
     name: 'Ranchu Goldfish',
@@ -400,6 +456,7 @@ export const fish: Item[] = [
     location: 'Pond',
     hoursActive: [9, 10, 11, 12, 13, 14, 15],
     monthsActive: allMonths,
+    shadow: 1,
   },
   {
     name: 'Ray',
@@ -407,6 +464,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
     monthsActive: [7, 8, 9, 10],
+    shadow: 4,
   },
   {
     name: 'Red Snapper',
@@ -414,6 +472,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: allHours,
     monthsActive: allMonths,
+    shadow: 3,
   },
   {
     name: 'Ribbon Eel',
@@ -421,6 +480,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: allHours,
     monthsActive: [5, 6, 7, 8, 9],
+    shadow: 7,
   },
   {
     name: 'Saddled Bichir',
@@ -428,6 +488,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: [0, 1, 2, 3, 21, 22, 23],
     monthsActive: [5, 6, 7, 8],
+    shadow: 3,
   },
   {
     name: 'Salmon',
@@ -435,6 +496,7 @@ export const fish: Item[] = [
     location: 'River (mouth)',
     hoursActive: allHours,
     monthsActive: [8],
+    shadow: 3,
   },
   {
     name: 'Saw Shark',
@@ -442,6 +504,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18, 19, 20, 21, 22, 23],
     monthsActive: [5, 6, 7, 8],
+    shadow: 6,
   },
   {
     name: 'Sea Bass',
@@ -449,6 +512,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: allHours,
     monthsActive: allMonths,
+    shadow: 4,
   },
   {
     name: 'Sea Butterfly',
@@ -456,6 +520,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: allHours,
     monthsActive: [0, 1, 2, 11],
+    shadow: 0,
   },
   {
     name: 'Sea Horse',
@@ -463,6 +528,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: allHours,
     monthsActive: [3, 4, 5, 6, 7, 8, 9, 10],
+    shadow: 0,
   },
   {
     name: 'Snapping Turtle',
@@ -470,6 +536,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: [0, 1, 2, 3, 21, 22, 23],
     monthsActive: [3, 4, 5, 6, 7, 8, 9],
+    shadow: 4,
   },
   {
     name: 'Soft-shelled Turtle',
@@ -477,6 +544,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18, 19, 20, 21, 22, 23],
     monthsActive: [7, 8],
+    shadow: 3,
   },
   {
     name: 'Squid',
@@ -484,6 +552,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: allHours,
     monthsActive: [0, 1, 2, 3, 4, 5, 6, 7, 11],
+    shadow: 2,
   },
   {
     name: 'Stringfish',
@@ -491,6 +560,7 @@ export const fish: Item[] = [
     location: 'River (clifftop)',
     hoursActive: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18, 19, 20, 21, 22, 23],
     monthsActive: [0, 1, 2, 11],
+    shadow: 5,
   },
   {
     name: 'Sturgeon',
@@ -498,6 +568,7 @@ export const fish: Item[] = [
     location: 'River (mouth)',
     hoursActive: allHours,
     monthsActive: [0, 1, 2, 8, 9, 10, 11],
+    shadow: 5,
   },
   {
     name: 'Suckerfish',
@@ -505,6 +576,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: allHours,
     monthsActive: [5, 6, 7, 8],
+    shadow: 6,
   },
   {
     name: 'Surgeonfish',
@@ -512,6 +584,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: allHours,
     monthsActive: [3, 4, 5, 6, 7, 8],
+    shadow: 1,
   },
   {
     name: 'Sweetfish',
@@ -519,6 +592,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: allHours,
     monthsActive: [6, 7, 8],
+    shadow: 2,
   },
   {
     name: 'Tadpole',
@@ -526,6 +600,7 @@ export const fish: Item[] = [
     location: 'Pond',
     hoursActive: allHours,
     monthsActive: [2, 3, 4, 5, 6],
+    shadow: 0,
   },
   {
     name: 'Tilapia',
@@ -533,6 +608,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: allHours,
     monthsActive: [5, 6, 7, 8, 9],
+    shadow: 2,
   },
   {
     name: 'Tuna',
@@ -540,6 +616,7 @@ export const fish: Item[] = [
     location: 'Pier',
     hoursActive: allHours,
     monthsActive: [0, 1, 2, 3, 10, 11],
+    shadow: 5,
   },
   {
     name: 'Whale Shark',
@@ -547,6 +624,7 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: allHours,
     monthsActive: [5, 6, 7, 8],
+    shadow: 6,
   },
   {
     name: 'Yellow Perch',
@@ -554,6 +632,7 @@ export const fish: Item[] = [
     location: 'River',
     hoursActive: allHours,
     monthsActive: [0, 1, 2, 9, 10, 11],
+    shadow: 2,
   },
   {
     name: 'Zebra Turkeyfish',
@@ -561,5 +640,6 @@ export const fish: Item[] = [
     location: 'Sea',
     hoursActive: allHours,
     monthsActive: [3, 4, 5, 6, 7, 8, 9, 10],
+    shadow: 2,
   },
 ];
