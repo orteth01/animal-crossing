@@ -1,13 +1,22 @@
 import React from 'react';
 import { Layout as AntLayout, Menu } from 'antd';
-import css from './Layout.module.scss';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-const { Header, Content, Footer } = AntLayout;
+import { GithubOutlined } from '@ant-design/icons';
+import css from './Layout.module.scss';
 
-const links = [
-  { href: '/', label: 'home' },
-  { href: '/items', label: 'items' },
+type LinkObj = {
+  href: string;
+  Label: () => JSX.Element;
+};
+
+const links: LinkObj[] = [
+  {
+    href: 'https://github.com/orteth01/animal-crossing',
+    Label: () => <GithubOutlined className={css.githubIcon} />,
+  },
+  { href: '/', Label: () => <span>home</span> },
+  { href: '/items', Label: () => <span>items</span> },
 ];
 
 type PricingProps = {
@@ -18,7 +27,7 @@ export function Layout({ children }: PricingProps) {
   const router = useRouter();
   return (
     <AntLayout className={css.layout}>
-      <Header className={css.header}>
+      <AntLayout.Header className={css.header}>
         <div className={css.icon}>TOAC</div>
         <Menu
           theme="dark"
@@ -26,19 +35,21 @@ export function Layout({ children }: PricingProps) {
           className={css.menu}
           selectedKeys={[router.pathname]}
         >
-          {links.map(({ href, label }) => (
-            <Menu.Item key={href}>
+          {links.map(({ href, Label }) => (
+            <Menu.Item key={href} className={css.menuItem}>
               <Link href={href}>
-                <a>{label}</a>
+                <a>
+                  <Label />
+                </a>
               </Link>
             </Menu.Item>
           ))}
         </Menu>
-      </Header>
-      <Content className={css.content}>{children}</Content>
-      <Footer className={css.footer}>
+      </AntLayout.Header>
+      <AntLayout.Content className={css.content}>{children}</AntLayout.Content>
+      <AntLayout.Footer className={css.footer}>
         Made for me - might be useful for you! <br /> 💖 Teddy 💖
-      </Footer>
+      </AntLayout.Footer>
     </AntLayout>
   );
 }
