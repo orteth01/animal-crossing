@@ -151,28 +151,28 @@ export function FishCard({ fish }: FishPropType) {
       </Row>
       <Row gutter={[0, 8]} align="bottom" style={{ paddingTop: '10px' }}>
         <Col>
-          <img style={{ opacity: fish.shadow === 0 ? 1 : 0.15 }} src="/img/smallest.png" className={css.bellsImg} />
+          <img className={fish.shadow === 0 ? css.shadowSelected : css.shadowInactive } src="/img/smallest.png" />
         </Col>
         <Col>
-          <img style={{ opacity: fish.shadow === 1 ? 1 : 0.15 }} src="/img/small.png" className={css.bellsImg} />
+          <img className={fish.shadow === 1 ? css.shadowSelected : css.shadowInactive } src="/img/small.png" />
         </Col>
         <Col>
-          <img style={{ opacity: fish.shadow === 2 ? 1 : 0.15 }} src="/img/medium.png" className={css.bellsImg} />
+          <img className={fish.shadow === 2 ? css.shadowSelected : css.shadowInactive } src="/img/medium.png" />
         </Col>
         <Col>
-          <img style={{ opacity: fish.shadow === 3 ? 1 : 0.15 }} src="/img/large.png" className={css.bellsImg} />
+          <img className={fish.shadow === 3 ? css.shadowSelected : css.shadowInactive } src="/img/large.png" />
         </Col>
         <Col>
-          <img style={{ opacity: fish.shadow === 4 ? 1 : 0.15 }} src="/img/x-large.png" className={css.bellsImg} />
+          <img className={fish.shadow === 4 ? css.shadowSelected : css.shadowInactive } src="/img/x-large.png" />
         </Col>
         <Col>
-          <img style={{ opacity: fish.shadow === 5 ? 1 : 0.15 }} src="/img/huge.png" className={css.bellsImg} />
+          <img className={fish.shadow === 5 ? css.shadowSelected : css.shadowInactive } src="/img/huge.png" />
         </Col>
         <Col>
-          <img style={{ opacity: fish.shadow === 6 ? 1 : 0.15 }} src="/img/huge-fin.png" className={css.bellsImg} />
+          <img className={fish.shadow === 6 ? css.shadowSelected : css.shadowInactive } src="/img/huge-fin.png" />
         </Col>
         <Col>
-          <img style={{ opacity: fish.shadow === 7 ? 1 : 0.15 }} src="/img/slim.png" className={css.bellsImg} />
+          <img className={fish.shadow === 7 ? css.shadowSelected : css.shadowInactive } src="/img/slim.png" />
         </Col>
       </Row>
     </Card>
