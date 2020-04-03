@@ -149,6 +149,32 @@ export function FishCard({ fish }: FishPropType) {
         </Col>
         <Col className={css.tagColumn}>{renderMonths(fish.monthsActive)}</Col>
       </Row>
+      <Row gutter={[0, 8]} align="bottom" style={{ paddingTop: '10px' }}>
+        <Col>
+          <img style={{ opacity: fish.shadow === 0 ? 1 : 0.15 }} src="/img/smallest.png" className={css.bellsImg} />
+        </Col>
+        <Col>
+          <img style={{ opacity: fish.shadow === 1 ? 1 : 0.15 }} src="/img/small.png" className={css.bellsImg} />
+        </Col>
+        <Col>
+          <img style={{ opacity: fish.shadow === 2 ? 1 : 0.15 }} src="/img/medium.png" className={css.bellsImg} />
+        </Col>
+        <Col>
+          <img style={{ opacity: fish.shadow === 3 ? 1 : 0.15 }} src="/img/large.png" className={css.bellsImg} />
+        </Col>
+        <Col>
+          <img style={{ opacity: fish.shadow === 4 ? 1 : 0.15 }} src="/img/x-large.png" className={css.bellsImg} />
+        </Col>
+        <Col>
+          <img style={{ opacity: fish.shadow === 5 ? 1 : 0.15 }} src="/img/huge.png" className={css.bellsImg} />
+        </Col>
+        <Col>
+          <img style={{ opacity: fish.shadow === 6 ? 1 : 0.15 }} src="/img/huge-fin.png" className={css.bellsImg} />
+        </Col>
+        <Col>
+          <img style={{ opacity: fish.shadow === 7 ? 1 : 0.15 }} src="/img/slim.png" className={css.bellsImg} />
+        </Col>
+      </Row>
     </Card>
   );
 }
