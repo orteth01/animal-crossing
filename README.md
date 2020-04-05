@@ -18,14 +18,19 @@ npm run dev
 
 ## Credits
 
-Fish data from:
+#### Fish data:
 
-- [attack of the fan boy](https://attackofthefanboy.com/guides/animal-crossing-new-horizons-fish-prices-guide/)
-- [Polygon](https://www.polygon.com/animal-crossing-new-horizons-switch-acnh-guide/2020/3/23/21190775/fish-locations-times-month-day-list-critterpedia)
+[attack of the fan boy](https://attackofthefanboy.com/guides/animal-crossing-new-horizons-fish-prices-guide/)
 
-Insect data from:
+[Polygon](https://www.polygon.com/animal-crossing-new-horizons-switch-acnh-guide/2020/3/23/21190775/fish-locations-times-month-day-list-critterpedia)
 
-- [VG247](https://www.vg247.com/2020/03/27/animal-crossing-new-horizons-bug-prices-locations/)
-- [Polygon](https://www.polygon.com/animal-crossing-new-horizons-switch-acnh-guide/2020/3/24/21191276/insect-bug-locations-times-month-day-list-critterpedia)
+#### Insect data:
+
+[VG247](https://www.vg247.com/2020/03/27/animal-crossing-new-horizons-bug-prices-locations/)
+[Polygon](https://www.polygon.com/animal-crossing-new-horizons-switch-acnh-guide/2020/3/24/21191276/insect-bug-locations-times-month-day-list-critterpedia)
+
+#### Shell data:
+
+[attack of the fan boy](https://attackofthefanboy.com/guides/animal-crossing-new-horizons-shell-prices-guide/)
 
 If you see data that is incorrect, please [create an issue](https://github.com/orteth01/animal-crossing/issues/new) and add the `invalid data` label or just open a PR.
