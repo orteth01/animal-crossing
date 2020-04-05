@@ -49,25 +49,11 @@ export function Fish() {
     <>
       <Row gutter={[16, 16]} align="top">
         <Col xs={24} sm={12} md={8} lg={6}>
-          <p className={css.filterLabel}>Name search</p>
+          <p className={css.filterLabel}>Name</p>
           <Input.Search
             onChange={(e) => setSearchValue(e.target.value)}
             allowClear
           />
-        </Col>
-        <Col xs={24} sm={12} md={8} lg={6}>
-          <p className={css.filterLabel}>Time</p>
-          <Row>
-            <Col>
-              <Switch checked={onlyShowActive} onChange={setOnlyShowActive} />{' '}
-              Currently active
-            </Col>
-          </Row>
-          {!onlyShowActive && (
-            <Row>
-              <Col>TODO: add custom time filters 😁</Col>
-            </Row>
-          )}
         </Col>
         <Col xs={24} sm={12} md={8} lg={6}>
           <p className={css.filterLabel}>Sort</p>
@@ -86,6 +72,20 @@ export function Fish() {
               </Radio>
             ))}
           </Radio.Group>
+        </Col>
+        <Col xs={24} sm={12} md={8} lg={6}>
+          <p className={css.filterLabel}>Time</p>
+          <Row>
+            <Col>
+              <Switch checked={onlyShowActive} onChange={setOnlyShowActive} />{' '}
+              Currently active
+            </Col>
+          </Row>
+          {!onlyShowActive && (
+            <Row>
+              <Col>TODO: add custom time filters 😁</Col>
+            </Row>
+          )}
         </Col>
         <Col xs={24} sm={12} md={8} lg={6}>
           <p className={css.filterLabel}>Location</p>

@@ -1,40 +1,29 @@
 import React, { useState, useMemo } from 'react';
-import { Switch, List, Input, Radio, Row, Col } from 'antd';
+import { List, Input, Radio, Row, Col } from 'antd';
 import { useDebounce } from 'hooks/useDebounce';
 import { ItemSortBy } from 'types/item';
 import { itemSortOptions } from 'data/item';
-import { insects } from 'data/insects';
-import { InsectCard } from './InsectCard';
-import { searchFilter, onlyShowActiveFilter } from 'helpers/filter';
+import { shells } from 'data/shells';
+import { ShellCard } from './ShellCard';
+import { searchFilter } from 'helpers/filter';
 import { itemSorter } from 'helpers/sort';
-import css from './Insects.module.scss';
+import css from './Shells.module.scss';
 
-export function Insects() {
+export function Shells() {
   // filter
-  const [onlyShowActive, setOnlyShowActive] = useState(true);
   const [searchValue, setSearchValue] = useState('');
   const debouncedSearchValue = useDebounce(searchValue, 500);
-  const filteredInsects = useMemo(() => {
-    let ret = [...insects];
-
-    if (onlyShowActive) {
-      ret = ret.filter(onlyShowActiveFilter);
-    } else {
-      // apply custom filters
-    }
-
-    if (debouncedSearchValue) {
-      ret = ret.filter(searchFilter(debouncedSearchValue));
-    }
-
-    return ret;
-  }, [onlyShowActive, debouncedSearchValue]);
+  const filteredShells = useMemo(() => {
+    return debouncedSearchValue
+      ? shells.filter(searchFilter(debouncedSearchValue))
+      : shells;
+  }, [debouncedSearchValue]);
 
   // sort
   const [sortValue, setSortValue] = useState<ItemSortBy>('Name');
-  const sortedInsects = useMemo(
-    () => filteredInsects.sort(itemSorter(sortValue)),
-    [sortValue, filteredInsects]
+  const sortedShells = useMemo(
+    () => filteredShells.sort(itemSorter(sortValue)),
+    [sortValue, filteredShells]
   );
 
   return (
@@ -71,30 +60,16 @@ export function Insects() {
             </Radio.Group>
           </Radio.Group>
         </Col>
-        <Col xs={24} sm={12} md={8} lg={6}>
-          <p className={css.filterLabel}>Time</p>
-          <Row>
-            <Col>
-              <Switch checked={onlyShowActive} onChange={setOnlyShowActive} />{' '}
-              Currently active
-            </Col>
-          </Row>
-          {!onlyShowActive && (
-            <Row>
-              <Col>TODO: add custom time filters 😁</Col>
-            </Row>
-          )}
-        </Col>
       </Row>
       <List
         grid={{ gutter: 16, xs: 1, sm: 2, md: 3, lg: 4 }}
-        dataSource={sortedInsects}
-        renderItem={(i) => (
+        dataSource={sortedShells}
+        renderItem={(s) => (
           <List.Item>
-            <InsectCard insect={i} />
+            <ShellCard shell={s} />
           </List.Item>
         )}
-        pagination={{ pageSize: 12 }}
+        pagination={false}
       />
     </>
   );

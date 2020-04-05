@@ -1,5 +1,5 @@
 import cx from 'classnames';
-import { Item } from 'types/item';
+import { Fish } from 'types/item';
 import css from './FishShadows.module.scss';
 
 const shadows = [
@@ -14,7 +14,7 @@ const shadows = [
 ];
 
 type FishShadowsPropType = {
-  fish: Item;
+  fish: Fish;
 };
 
 export function FishShadows({ fish }: FishShadowsPropType) {
