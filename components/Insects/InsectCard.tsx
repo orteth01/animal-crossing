@@ -6,11 +6,11 @@ import {
   EnvironmentTwoTone,
 } from '@ant-design/icons';
 import { Hours, Months } from 'components/ItemCard';
-import { Item } from 'types/item';
+import { Insect } from 'types/item';
 import css from './InsectCard.module.scss';
 
 type InsectCardPropType = {
-  insect: Item;
+  insect: Insect;
 };
 
 export function InsectCard({ insect }: InsectCardPropType) {

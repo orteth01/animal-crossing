@@ -1,4 +1,4 @@
-import { Item, FishLocation } from 'types/item';
+import { Fish, FishLocation } from 'types/item';
 import { Month } from 'types/datetime';
 import { allHours, allMonths } from './datetime';
 
@@ -12,7 +12,7 @@ export const fishLocations: FishLocation[] = [
   'Sea (rainy day)',
 ];
 
-export const fish: Item[] = [
+export const fish: Fish[] = [
   {
     name: 'Anchovy',
     value: 200,

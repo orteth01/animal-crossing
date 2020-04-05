@@ -44,10 +44,18 @@ export type Unknown = 'unknown';
 export interface Item {
   name: string;
   value: number;
+}
+export interface Shell extends Item {}
+export interface Fish extends Item {
   location: Location | Unknown;
   activeHours: Hour[] | Unknown;
   activeMonths: Set<Month>;
-  shadow?: FishShadowSize;
+  shadow: FishShadowSize;
+}
+export interface Insect extends Item {
+  location: Location | Unknown;
+  activeHours: Hour[] | Unknown;
+  activeMonths: Set<Month>;
 }
 
 export type ItemSortBy = 'Name' | 'Value (low-high)' | 'Value (high-low)';

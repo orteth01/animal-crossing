@@ -6,12 +6,12 @@ import {
   CalendarTwoTone,
   EnvironmentTwoTone,
 } from '@ant-design/icons';
-import { Item } from 'types/item';
+import { Fish } from 'types/item';
 import { FishShadows } from './FishShadows';
 import css from './FishCard.module.scss';
 
 type FishPropType = {
-  fish: Item;
+  fish: Fish;
 };
 
 export function FishCard({ fish }: FishPropType) {

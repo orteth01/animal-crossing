@@ -1,8 +1,8 @@
-import { Item } from 'types/item';
+import { Insect } from 'types/item';
 import { Month } from 'types/datetime';
 import { allHours, allMonths } from './datetime';
 
-export const insects: Item[] = [
+export const insects: Insect[] = [
   {
     name: 'Common Butterfly',
     location: 'Flying',
