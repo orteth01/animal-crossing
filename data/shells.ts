@@ -15,7 +15,11 @@ export const shells: Shell[] = [
   },
   {
     name: 'Giant clam',
-    value: 450,
+    value: 900,
+  },
+  {
+    name: 'Manila clam',
+    value: 100,
   },
   {
     name: 'Oyster shell',
@@ -43,7 +47,7 @@ export const shells: Shell[] = [
   },
   {
     name: 'Venus comb',
-    value: 150,
+    value: 300,
   },
   {
     name: 'White scallop',
